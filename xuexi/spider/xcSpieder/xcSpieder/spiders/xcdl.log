@@ -1,0 +1,1026 @@
+2019-01-14 14:13:33 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: xcSpieder)
+2019-01-14 14:13:33 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.7 |Anaconda, Inc.| (default, Oct 23 2018, 19:16:44) - [GCC 7.3.0], pyOpenSSL 18.0.0 (OpenSSL 1.1.1  11 Sep 2018), cryptography 2.3.1, Platform Linux-4.13.0-31-generic-x86_64-with-debian-stretch-sid
+2019-01-14 14:13:33 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'xcSpieder', 'LOG_FILE': 'xcdl.log', 'NEWSPIDER_MODULE': 'xcSpieder.spiders', 'SPIDER_MODULES': ['xcSpieder.spiders']}
+2019-01-14 14:13:33 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2019-01-14 14:13:33 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-01-14 14:13:33 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-01-14 14:13:33 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-01-14 14:13:33 [scrapy.core.engine] INFO: Spider opened
+2019-01-14 14:13:33 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-01-14 14:13:33 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2019-01-14 14:13:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.xicidaili.com/> (referer: None)
+2019-01-14 14:13:34 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.xicidaili.com/> (referer: None)
+Traceback (most recent call last):
+  File "/var/sw/anaconda3/envs/oop/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/var/sw/anaconda3/envs/oop/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/var/sw/anaconda3/envs/oop/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/var/sw/anaconda3/envs/oop/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/var/sw/anaconda3/envs/oop/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/tlxy/tulingxueyuan/xuexi/spider/xcSpieder/xcSpieder/spiders/xcdl.py", line 72, in parse
+    infos["country"] = country
+  File "/var/sw/anaconda3/envs/oop/lib/python3.6/site-packages/scrapy/item.py", line 66, in __setitem__
+    (self.__class__.__name__, key))
+KeyError: 'XcdlItem does not support field: country'
+2019-01-14 14:13:34 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-01-14 14:13:34 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 321,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 5369,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 1, 14, 6, 13, 34, 460015),
+ 'log_count/DEBUG': 2,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 777404416,
+ 'memusage/startup': 777404416,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/KeyError': 1,
+ 'start_time': datetime.datetime(2019, 1, 14, 6, 13, 33, 879417)}
+2019-01-14 14:13:34 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-01-14 14:18:32 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: xcSpieder)
+2019-01-14 14:18:32 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.7 |Anaconda, Inc.| (default, Oct 23 2018, 19:16:44) - [GCC 7.3.0], pyOpenSSL 18.0.0 (OpenSSL 1.1.1  11 Sep 2018), cryptography 2.3.1, Platform Linux-4.13.0-31-generic-x86_64-with-debian-stretch-sid
+2019-01-14 14:18:32 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'xcSpieder', 'LOG_FILE': 'xcdl.log', 'NEWSPIDER_MODULE': 'xcSpieder.spiders', 'SPIDER_MODULES': ['xcSpieder.spiders']}
+2019-01-14 14:18:32 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2019-01-14 14:18:32 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-01-14 14:18:32 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-01-14 14:18:32 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-01-14 14:18:32 [scrapy.core.engine] INFO: Spider opened
+2019-01-14 14:18:32 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-01-14 14:18:32 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2019-01-14 14:18:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.xicidaili.com/> (referer: None)
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '117.88.29.231',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '江苏南京',
+ 'type': 'HTTPS',
+ 'verificationtime': '10分钟前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '19天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.117.236',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTP',
+ 'verificationtime': '10分钟前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '19天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.113.76',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北十堰',
+ 'type': 'HTTP',
+ 'verificationtime': '10分钟前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '112.85.170.187',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '江苏南通',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '112.85.165.194',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '江苏南通',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.115.161',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北仙桃',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '485天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '58.56.149.198',
+ 'isanonymous': '高匿',
+ 'port': '53281',
+ 'serveraddress': '山东青岛',
+ 'type': 'HTTPS',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '58.52.137.148',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北咸宁',
+ 'type': 'HTTPS',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '16天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.116.87',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTP',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '14天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.116.56',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '121.227.66.187',
+ 'isanonymous': '透明',
+ 'port': '3128',
+ 'serveraddress': '江苏苏州',
+ 'type': 'HTTP',
+ 'verificationtime': '8小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '514天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '218.22.7.62',
+ 'isanonymous': '透明',
+ 'port': '53281',
+ 'serveraddress': '安徽合肥',
+ 'type': 'HTTPS',
+ 'verificationtime': '18小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '301天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '182.18.13.149',
+ 'isanonymous': '透明',
+ 'port': '53281',
+ 'serveraddress': '北京',
+ 'type': 'HTTPS',
+ 'verificationtime': '1 天'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '182.88.13.172',
+ 'isanonymous': '透明',
+ 'port': '9797',
+ 'serveraddress': '广西南宁',
+ 'type': 'HTTP',
+ 'verificationtime': '1 天'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '446天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '112.67.164.34',
+ 'isanonymous': '透明',
+ 'port': '9797',
+ 'serveraddress': '海南海口',
+ 'type': 'HTTPS',
+ 'verificationtime': '2 天'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '85天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '114.116.10.21',
+ 'isanonymous': '透明',
+ 'port': '3128',
+ 'serveraddress': '广东深圳',
+ 'type': 'HTTPS',
+ 'verificationtime': '2 天'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1小时',
+ 'country': None,
+ 'ipaddress': '140.143.237.109',
+ 'isanonymous': '透明',
+ 'port': '808',
+ 'serveraddress': None,
+ 'type': 'HTTPS',
+ 'verificationtime': '2 天'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1006天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '112.91.218.21',
+ 'isanonymous': '透明',
+ 'port': '9000',
+ 'serveraddress': '广东河源',
+ 'type': 'HTTP',
+ 'verificationtime': '2 天'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1小时',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '59.38.60.73',
+ 'isanonymous': '透明',
+ 'port': '9797',
+ 'serveraddress': '广东珠海',
+ 'type': 'HTTP',
+ 'verificationtime': '2 天'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '228天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '101.132.122.230',
+ 'isanonymous': '透明',
+ 'port': '3128',
+ 'serveraddress': '北京',
+ 'type': 'HTTPS',
+ 'verificationtime': '3 天'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '117.88.29.231',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '江苏南京',
+ 'type': 'HTTPS',
+ 'verificationtime': '7分钟前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '20天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.115.113',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北仙桃',
+ 'type': 'HTTPS',
+ 'verificationtime': '7分钟前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '58.52.137.148',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北咸宁',
+ 'type': 'HTTPS',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '14天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.116.56',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '20天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.116.131',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '27.29.78.181',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北',
+ 'type': 'HTTPS',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '14天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.112.91',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北十堰',
+ 'type': 'HTTPS',
+ 'verificationtime': '3小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.117.108',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '3小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '17天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.116.228',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '4小时前'}
+2019-01-14 14:18:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '6天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.117.99',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '4小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '14天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.114.2',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北十堰',
+ 'type': 'HTTP',
+ 'verificationtime': '7分钟前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '19天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.113.76',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北十堰',
+ 'type': 'HTTP',
+ 'verificationtime': '7分钟前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '113.122.171.102',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '山东日照',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '183.148.146.185',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '浙江台州',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '124.94.199.88',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '辽宁阜新',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '1.192.245.100',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '河南郑州',
+ 'type': 'HTTP',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '125.123.141.172',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '浙江嘉兴',
+ 'type': 'HTTP',
+ 'verificationtime': '3小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '110.52.235.34',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖南岳阳',
+ 'type': 'HTTP',
+ 'verificationtime': '4小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '111.176.22.44',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北荆州',
+ 'type': 'HTTP',
+ 'verificationtime': '4小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '121.225.65.211',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '江苏',
+ 'type': 'HTTP',
+ 'verificationtime': '5小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '2080天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '121.31.150.165',
+ 'isanonymous': '高匿',
+ 'port': '6666',
+ 'serveraddress': '广西北海',
+ 'type': 'socks4/5',
+ 'verificationtime': '1 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1980天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '182.33.217.116',
+ 'isanonymous': '高匿',
+ 'port': '6666',
+ 'serveraddress': '山东潍坊',
+ 'type': 'socks4/5',
+ 'verificationtime': '3 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1982天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '121.31.103.33',
+ 'isanonymous': '高匿',
+ 'port': '6666',
+ 'serveraddress': '广西防城港',
+ 'type': 'socks4/5',
+ 'verificationtime': '6 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1921天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '113.121.245.32',
+ 'isanonymous': '高匿',
+ 'port': '6667',
+ 'serveraddress': '山东德州',
+ 'type': 'socks4/5',
+ 'verificationtime': '7 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1915天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '110.73.33.207',
+ 'isanonymous': '高匿',
+ 'port': '6673',
+ 'serveraddress': '广西防城港',
+ 'type': 'socks4/5',
+ 'verificationtime': '8 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1813天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '112.114.78.54',
+ 'isanonymous': '高匿',
+ 'port': '6673',
+ 'serveraddress': '云南临沧',
+ 'type': 'socks4/5',
+ 'verificationtime': '12 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1808天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '112.114.76.176',
+ 'isanonymous': '高匿',
+ 'port': '6668',
+ 'serveraddress': '云南临沧',
+ 'type': 'socks4/5',
+ 'verificationtime': '1 年前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1571天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '114.239.253.38',
+ 'isanonymous': '高匿',
+ 'port': '6666',
+ 'serveraddress': '江苏宿迁市泗阳县',
+ 'type': 'socks4/5',
+ 'verificationtime': '1 年前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1556天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '220.179.214.77',
+ 'isanonymous': '高匿',
+ 'port': '6666',
+ 'serveraddress': '安徽铜陵',
+ 'type': 'socks4/5',
+ 'verificationtime': '1 年前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1458天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '114.139.48.8',
+ 'isanonymous': '高匿',
+ 'port': '6668',
+ 'serveraddress': '贵州遵义',
+ 'type': 'socks4/5',
+ 'verificationtime': '大约 2 年'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '14天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.114.2',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北十堰',
+ 'type': 'HTTP',
+ 'verificationtime': '10分钟前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.116.236',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '10分钟前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '20天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.115.113',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北仙桃',
+ 'type': 'HTTPS',
+ 'verificationtime': '10分钟前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '113.122.171.102',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '山东日照',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '183.148.146.185',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '浙江台州',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '124.94.199.88',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '辽宁阜新',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '18天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.117.28',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '1.192.245.100',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '河南郑州',
+ 'type': 'HTTP',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '14天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '110.52.235.240',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖南岳阳',
+ 'type': 'HTTPS',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '20天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.114.243',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北十堰',
+ 'type': 'HTTPS',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '162天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '222.221.11.119',
+ 'isanonymous': '透明',
+ 'port': '3128',
+ 'serveraddress': '云南昆明',
+ 'type': 'HTTP',
+ 'verificationtime': '14小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '627天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '60.5.254.169',
+ 'isanonymous': '透明',
+ 'port': '8081',
+ 'serveraddress': '河北邯郸',
+ 'type': 'HTTPS',
+ 'verificationtime': '1 天'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '440天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '218.75.70.3',
+ 'isanonymous': '透明',
+ 'port': '8118',
+ 'serveraddress': '浙江杭州',
+ 'type': 'HTTP',
+ 'verificationtime': '1 天'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '434天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '113.116.147.68',
+ 'isanonymous': '透明',
+ 'port': '9000',
+ 'serveraddress': '广东深圳',
+ 'type': 'HTTPS',
+ 'verificationtime': '1 天'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1173天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '124.207.82.166',
+ 'isanonymous': '透明',
+ 'port': '8008',
+ 'serveraddress': '北京',
+ 'type': 'HTTP',
+ 'verificationtime': '2 天'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '40分钟',
+ 'country': None,
+ 'ipaddress': '120.78.131.10',
+ 'isanonymous': '透明',
+ 'port': '3128',
+ 'serveraddress': '长城宽带',
+ 'type': 'HTTP',
+ 'verificationtime': '2 天'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '4小时',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '113.105.170.139',
+ 'isanonymous': '透明',
+ 'port': '3128',
+ 'serveraddress': '广东东莞',
+ 'type': 'HTTPS',
+ 'verificationtime': '2 天'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '108天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '218.59.193.18',
+ 'isanonymous': '透明',
+ 'port': '57045',
+ 'serveraddress': '山东东营',
+ 'type': 'HTTPS',
+ 'verificationtime': '2 天'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '220.175.254.60',
+ 'isanonymous': '透明',
+ 'port': '8081',
+ 'serveraddress': '江西景德镇',
+ 'type': 'HTTPS',
+ 'verificationtime': '3 天'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '239天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '1.192.240.88',
+ 'isanonymous': '透明',
+ 'port': '9797',
+ 'serveraddress': '河南郑州',
+ 'type': 'HTTP',
+ 'verificationtime': '3 天'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.116.236',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '7分钟前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '485天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '58.56.149.198',
+ 'isanonymous': '高匿',
+ 'port': '53281',
+ 'serveraddress': '山东青岛',
+ 'type': 'HTTPS',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '14天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '110.52.235.240',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖南岳阳',
+ 'type': 'HTTPS',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '20天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.114.243',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北十堰',
+ 'type': 'HTTPS',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '125.123.137.136',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '浙江嘉兴',
+ 'type': 'HTTPS',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '95天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '221.1.200.242',
+ 'isanonymous': '高匿',
+ 'port': '38652',
+ 'serveraddress': '山东菏泽',
+ 'type': 'HTTPS',
+ 'verificationtime': '3小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '19天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.117.149',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '3小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.116.178',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '3小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '19天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.117.249',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTPS',
+ 'verificationtime': '4小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '15天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.114.39',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北十堰',
+ 'type': 'HTTPS',
+ 'verificationtime': '4小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '19天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.117.236',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTP',
+ 'verificationtime': '7分钟前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '112.85.170.187',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '江苏南通',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '112.85.165.194',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '江苏南通',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.115.161',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北仙桃',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '18天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.117.28',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTP',
+ 'verificationtime': '1小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '16天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '119.101.116.87',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖北潜江',
+ 'type': 'HTTP',
+ 'verificationtime': '2小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '7天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '110.52.235.163',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '湖南岳阳',
+ 'type': 'HTTP',
+ 'verificationtime': '3小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '125.123.139.11',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '浙江嘉兴',
+ 'type': 'HTTP',
+ 'verificationtime': '4小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '13天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '112.85.131.19',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '江苏南通',
+ 'type': 'HTTP',
+ 'verificationtime': '4小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1分钟',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '1.197.203.136',
+ 'isanonymous': '高匿',
+ 'port': '9999',
+ 'serveraddress': '河南济源',
+ 'type': 'HTTP',
+ 'verificationtime': '5小时前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '2146天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '121.31.193.132',
+ 'isanonymous': '高匿',
+ 'port': '6675',
+ 'serveraddress': '广西桂林',
+ 'type': 'socks4/5',
+ 'verificationtime': '2 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '2011天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '117.69.98.216',
+ 'isanonymous': '高匿',
+ 'port': '6666',
+ 'serveraddress': '安徽宿州',
+ 'type': 'socks4/5',
+ 'verificationtime': '4 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1992天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '113.121.245.231',
+ 'isanonymous': '高匿',
+ 'port': '6675',
+ 'serveraddress': '山东德州',
+ 'type': 'socks4/5',
+ 'verificationtime': '7 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1977天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '218.73.130.59',
+ 'isanonymous': '高匿',
+ 'port': '6675',
+ 'serveraddress': '浙江温州',
+ 'type': 'socks4/5',
+ 'verificationtime': '8 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1920天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '110.73.30.246',
+ 'isanonymous': '高匿',
+ 'port': '6666',
+ 'serveraddress': '广西防城港',
+ 'type': 'socks4/5',
+ 'verificationtime': '9 月前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1803天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '171.38.64.67',
+ 'isanonymous': '高匿',
+ 'port': '6675',
+ 'serveraddress': '广西玉林',
+ 'type': 'socks4/5',
+ 'verificationtime': '1 年前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1763天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '222.172.239.69',
+ 'isanonymous': '高匿',
+ 'port': '6666',
+ 'serveraddress': '云南昆明市呈贡县',
+ 'type': 'socks4/5',
+ 'verificationtime': '1 年前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1561天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '116.28.106.165',
+ 'isanonymous': '高匿',
+ 'port': '6666',
+ 'serveraddress': '广东中山',
+ 'type': 'socks4/5',
+ 'verificationtime': '1 年前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1489天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '110.73.32.7',
+ 'isanonymous': '高匿',
+ 'port': '6666',
+ 'serveraddress': '广西防城港',
+ 'type': 'socks4/5',
+ 'verificationtime': '1 年前'}
+2019-01-14 14:18:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.xicidaili.com/>
+{'alivetime': '1416天',
+ 'country': '//fs.xicidaili.com/images/flag/cn.png',
+ 'ipaddress': '111.124.231.101',
+ 'isanonymous': '高匿',
+ 'port': '6668',
+ 'serveraddress': '贵州铜仁地区铜仁',
+ 'type': 'socks4/5',
+ 'verificationtime': '大约 2 年'}
+2019-01-14 14:18:33 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-01-14 14:18:33 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 321,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 5370,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 1, 14, 6, 18, 33, 363038),
+ 'item_scraped_count': 100,
+ 'log_count/DEBUG': 102,
+ 'log_count/INFO': 7,
+ 'memusage/max': 805752832,
+ 'memusage/startup': 805752832,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2019, 1, 14, 6, 18, 32, 352542)}
+2019-01-14 14:18:33 [scrapy.core.engine] INFO: Spider closed (finished)
